@@ -1,0 +1,192 @@
+
+
+.layout{
+    width: 100%;
+    max-width: 640/20rem;
+    min-width: 320/20rem;
+    margin: 0 auto;
+}
+
+/*公用样式表*/
+
+.footer{
+    .wrap{
+        font-size: 12/20rem;
+        text-align: center;
+        ul{
+            display: flex;
+            border-bottom: 1px solid #CCCCCC;
+            border-top: 1px solid #CCCCCC;
+            li{
+                width: 33.33%;
+                height: 1.5rem;
+                line-height: 1.5rem;
+              
+                a{
+                   display: block;
+                   width: 100%;
+                   height: 100%; 
+                }
+                a:nth-child(1){
+                     border-right: 1px solid #CCCCCC;
+                }
+                a:nth-child(2){
+                     border-right: 1px solid #CCCCCC;
+                }
+            }
+        }
+        p{
+          height: 30/20rem; 
+           
+        }
+        p:nth-child(1){
+          line-height:30/20rem 
+        }
+         p:nth-child(2){
+          line-height:2.5rem 
+        }
+    }
+}
+
+
+/*列表项*/
+h2{
+    height: 2rem;
+    background-color: #EDEDED;
+    font-size: 14/20rem;
+   line-height: 2rem;
+}
+.items{
+    .item{
+        border-bottom: 1px solid #CCCCCC;
+        .item-left{
+            float: left;
+            width: 5rem;
+            height: 5rem;
+            line-height: 5rem;
+            text-align: center;
+            padding-top: 0.5rem;
+            img{
+                height: 4rem;
+                width: 80/20rem;
+            }
+            
+        }
+        .item-right{
+            overflow: hidden;
+            font-size: 12/20rem;
+            padding-right: 1rem;
+            padding-top: 0.5rem;
+        }
+    }
+}
+
+/*内容项*/
+
+.content{
+    .wrap{
+        font-size: 14/20rem;
+      div{
+           text-align: center;
+          h3{
+               text-align: center;
+          }
+          img{
+              
+          }
+      }
+    }
+}
+
+.box{
+    font-size: 14/20rem;
+    .sub-nav{
+        display: flex;
+        border-top: 1px solid #CCCCCC;
+        border-bottom: 1px solid #CCCCCC;
+        a{
+            flex: 1;
+           
+            height: 35/20rem;
+            line-height: 35/20rem;
+        }
+        a:nth-child(1){
+            border-right: 1px solid #CCCCCC ;
+        }
+        a:nth-child(2){
+            border-right: 1px solid #CCCCCC ;
+        }
+    }
+    .sub-box{
+        width: 100%;
+        .price{
+            width: 100%;
+            background-color: #fff;
+          
+            ul{
+               padding: 10/20rem;
+               border-bottom: 1px solid #CCCCCC;
+                li{
+                    width: 100%;
+                    text-align: left;
+                    a{
+                        display: inline-block;
+                        height:1rem;
+                        width: 100%;
+                        span{
+                            vertical-align: middle;
+                            height: 1rem;
+                           
+                           &::before{
+                                content: '';
+                                display: inline-block;
+                                height: 1rem;
+                                width: 1rem;
+                                background: url(../img/slogo.png) no-repeat;
+                                vertical-align: middle;
+                                font-size: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .tips{
+                padding: 10/20rem;
+                font-size: 10/20rem;
+                text-align: left;
+                background-color: #fff;
+                p{
+                    line-height: 16/20rem;
+                }
+            }
+        }
+        .key{
+            text-align: left;
+            background-color: #fff;
+            font-size: 10/20rem;
+            line-height: 20/20rem;
+            padding: 10/20rem;
+        }
+        .comment{
+            text-align: left;
+            padding: 10/20rem;
+            border-bottom: 1px solid #CCCCCC;
+            h4{ 
+                height: 1.5rem;
+                line-height: 1.5rem;
+                font-size: 10/20rem;
+                i{
+                    float: right;
+                }
+            }
+            p{
+               font-size: 12/20rem;
+               line-height: 1rem;
+            }
+            p:nth-child(1){
+                text-align: right;
+            }
+        }
+    }
+}
+

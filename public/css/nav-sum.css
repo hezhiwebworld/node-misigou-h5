@@ -1,0 +1,22 @@
+.sum-nav {
+  background-color: #fff;
+}
+.sum-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+}
+.sum-nav ul li {
+  border: 1px solid #C4C4C4;
+  background-color: #F4F4F4;
+  margin: 0.25rem;
+  height: 1.25rem;
+}
+.sum-nav ul li a {
+  font-size: 0.7rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  height: 100%;
+  display: block;
+  line-height: 1.25rem;
+}

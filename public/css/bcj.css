@@ -1,0 +1,94 @@
+.list {
+  background: #fff;
+}
+.list .sub-nav {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 4px solid #F8F8F8;
+}
+.list .sub-nav .wrap {
+  width: 300%;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+}
+.list .sub-nav .wrap a {
+  float: left;
+  font-size: 0.7rem;
+  width: 3rem;
+}
+.list .sub-nav .wrap a i.icur {
+  display: inline-block;
+  height: 1.75rem;
+  border-bottom: 2px solid red;
+}
+.list .wrap .items .item .item-right p {
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+.list .wrap .items .item .item-right span {
+  color: #FC353A;
+  line-height: 1.75rem;
+}
+.list .wrap .items .item .item-right span:nth-child(3) {
+  color: #CCCCCC;
+  font-size: 0.5rem;
+}
+.list .wrap .items .item .item-right span:nth-child(2) {
+  font-size: 0.7rem;
+}
+.list .wrap .items .item .item-right .progress {
+  height: 0.75rem;
+  border: 2px solid #FC383B;
+  background-color: #FFB8B8;
+  border-radius: 5px;
+  width: 4.25rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.list .wrap .items .item .item-right .progress .in {
+  height: 100%;
+  background-color: #FC383B;
+  width: 50%;
+  border-radius: 0px 5px 5px 1px;
+  text-align: center;
+  line-height: 0.6rem;
+}
+.list .wrap .items .item .item-right .progress .in i {
+  color: white;
+  font-size: 0.5rem;
+}
+.list .wrap .items .item .item-right .progress .tip {
+  position: absolute;
+  transform: translateX(150%);
+  font-size: 0.5rem;
+  top: 0;
+  color: #FC383B;
+}
+.list .wrap .items .item .item-right .add {
+  height: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+.list .wrap .items .item .item-right .add .col-1 {
+  float: left;
+  border: 1px dotted #ED7D7F;
+  height: 100%;
+  line-height: 1.35rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.list .wrap .items .item .item-right .add .col-1 a {
+  color: #ED7D7F;
+}
+.list .wrap .items .item .item-right .add .col-2 {
+  float: right;
+  background-color: #FF5E5D;
+  border-radius: 0.15rem;
+  height: 100%;
+  line-height: 1.35rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.list .wrap .items .item .item-right .add .col-2 a {
+  color: white;
+}

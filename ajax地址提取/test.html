@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+
+    // 127.0.0.1  自己访问自己
+
+    // http://192.168.16.63:8888/MMBAPP/productlist.html?categoryid=0&category=%E7%94%B5%E8%A7%86&pageid=1
+	
+	// function query( url ) {
+    //     var obj = {};
+    //     var str = url.split('?')[1];
+    //     str.split('&').forEach(function( v, i ) {
+    //         var arr = v.split('=');
+    //         obj[arr[0]] = arr[1] ? arr[1] : '';
+    //     });
+    //     return obj;
+	// }
+
+    var str = "http://192.168.16.63:8888/MMBAPP/productlist.html?categoryid=0&category=电视&pageid=1";
+    function query( url ) {
+        var obj = {};
+        // 解析字符串 进行拼接 成 对象
+        var str = url.split('?')[1];
+        // 在进行切割
+        var arr = str.split('&');
+        arr.forEach( function( value, index ) {
+            var arrObj = value.split( "=" );
+            var key = arrObj[ 0 ];
+            var value = arrObj[ 1 ];
+            // 将对象的键值对 添加到对象中
+            obj[ key ] = value;
+        })
+        return obj;
+    }
+    console.log( obj )
+    // console.log( obj.categoryid );
+
+</script>
+</html>

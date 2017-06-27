@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		
+		<link rel="stylesheet" type="text/css" href="public/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="public/css/home.css"/>
+		<link rel="stylesheet" type="text/css" href="public/css/loyout.css"/>
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_ssmfapj41hq9qkt9.css"/>
+	</head>
+	<body>
+		<div class="layout">
+			<div class="home-header">
+				<div class="wrap clear">
+					<div class="left"><h1>蜜思购</h1></div>
+					<div class="center left">
+						<span>全网比价<i class="icon iconfont icon-iconfontdian1"></i>折扣</span>
+						<em>www.misigou.com</em>
+					</div>
+					<div class="right">
+						<i class="icon iconfont icon-yonghu"></i>
+					</div>
+				</div>
+			</div>
+			<div class="serach">
+				<form action="" method="post">
+					<input type="text" name="" id="" value="" placeholder="请输入你想比价的商品"/>
+					<input type="button" value="搜索"/>
+				</form>
+			</div>
+			<div class="home-nav">
+				<div class="wrap" id="nav-box">
+				</div>
+			</div>
+			<div class="home-hot"> 
+				<div class="wrap">
+					<h2>超值折扣推荐</h2>
+					<div class="items" id="home-count-box">
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="wrap">
+					<ul>
+						<li><a href="#">用户中心</a></li>
+						<li><a href="#">商家中心</a></li>
+						<li><a href="#"><i class="icon iconfont icon-fanhuidingbu"></i>返回顶部</a></li>
+					</ul>
+					<p><span>手机APP下载</span>蜜思购手机版--掌上比价平台</p>
+					<p><em>www.misigou.com</em></p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<!--渲染首页导航-->
+	<script type="text/html" id="tmp">
+		<ul class="clear">
+			{{ each result as value index }}
+			<li>
+				<a href="#">
+					{{ #value.img }}
+					<p>{{ #value.name }}</p>
+				</a>
+			</li>
+			 {{ /each }}
+		</ul>
+	</script>
+	<!--渲染首页列表-->
+	<script type="text/html" id="tmp1">
+		{{ each result as value index }}
+		<div class="item clear" data-product-id={{ #value.productId }}>
+			<div class="item-left">
+				{{ #value.productImgSm }}
+			</div>
+			<div class="item-right">
+				<p>{{ #value.productName }}</p>
+				<p><span>1.28L</span> / <i>{{ #value.productPinkage }}</i></p>
+				<p><span>{{ #value.productFrom }}</span><i>{{ #value.productTime }}</i></p>
+			</div>
+		</div>
+		{{ /each }}
+		
+	</script>
+	<script src="public/js/template.js" type="text/javascript" charset="utf-8"></script>
+	<script src="public/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="public/js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script src="public/js/getData.js" type="text/javascript" charset="utf-8"></script>
+	<script src="public/js/index.js" type="text/javascript" charset="utf-8"></script>
+</html>

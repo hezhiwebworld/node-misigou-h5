@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../public/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/home.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/loyout.css"/>
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_ikcd8itchaor.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/gnzk.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/sqk.css"/>
+		
+	</head>
+	<body>
+		<div class="layout">
+			<div class="home-header">
+				<div class="wrap clear">
+					<div class="left"><i class="icon iconfont icon-houtui"></i></div>
+					<span>国内折扣</span>
+				</div>
+			</div>
+			<div class="sqk-content">
+				<div class="wrap">
+					<!--内容页-->
+					<div id="gnzk-box">
+					</div>
+					<!--内容页-->
+				</div>
+			</div>
+			<!--公用头部-->
+			<div class="footer">
+				<div class="wrap">
+					<ul>
+						<li><a href="#">用户中心</a></li>
+						<li><a href="#">商家中心</a></li>
+						<li><a href="#"><i class="icon iconfont icon-fanhuidingbu"></i>返回顶部</a></li>
+					</ul>
+					<p><span>手机APP下载</span>蜜思购手机版--掌上比价平台</p>
+					<p><em>www.misigou.com</em></p>
+				</div>
+			</div>
+		
+		
+		</div>
+	</body>
+	<script type="text/html" id="tmp">
+		{{ each result as value index }}
+		<h3 class="ellipsis">{{ #value.productName }}</h3>
+		<p>
+			<span>{{ #value.productFrom }}</span>
+			<span>{{ #value.productTime }}</span>
+			<span>{{ #value.productTips }}</span>
+		</p>
+		<div class="box">
+			<article class="clear">
+				{{ #value.productImg }}
+				{{ #value.productInfo }}
+			</article>
+			{{ #value.productImg }}
+			<div class="goshop">
+				<input type="button" id="shop" value="" />
+				<label for="shop">前往购买</label>
+			</div>
+			<div class="erweima">
+				<img src="../public/img/mmbweixin2.png"/>
+			</div>
+			
+			<div class="mark">
+				
+				<div class="comment">
+					
+				</div>
+			</div>
+			
+		</div>
+		 {{ /each }}
+	</script>
+	<script src="../public/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/template.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/getData.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/tool.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/gnzk-con.js" type="text/javascript" charset="utf-8"></script>
+</html>

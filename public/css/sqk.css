@@ -1,0 +1,58 @@
+.home-header .wrap {
+  text-align: center;
+}
+.home-header .wrap .left i {
+  font-size: 1.25rem;
+  color: white;
+}
+.home-header .wrap span {
+  color: white;
+}
+.sqk-content .wrap {
+  padding: 0.5rem;
+  background-color: #fff;
+}
+.sqk-content .wrap h3 {
+  font-size: 0.7rem;
+  font-weight: bold;
+  height: 1.25rem;
+}
+.sqk-content .wrap p {
+  font-size: 0.5rem;
+  height: 1rem;
+}
+.sqk-content .wrap .box {
+  text-align: center;
+}
+.sqk-content .wrap .box article {
+  font-size: 0.7rem;
+  letter-spacing: 0.05rem;
+  line-height: 1rem;
+  text-align: left;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.sqk-content .wrap .box article img {
+  width: 5rem;
+  float: right;
+}
+.sqk-content .wrap .box p {
+  font-size: 0.7rem;
+  letter-spacing: 0.05rem;
+  line-height: 1rem;
+  padding-bottom: 2rem;
+}
+.sqk-content .wrap .box img {
+  width: 50%;
+}
+.sqk-content .wrap .box .address ul {
+  padding: 1rem;
+}
+.sqk-content .wrap .box .address ul li {
+  border-bottom: 1px dotted #CCCCCC;
+  color: black;
+}
+.sqk-content .wrap .box .address ul li a {
+  padding-left: 5rem;
+  color: #F59B44;
+}

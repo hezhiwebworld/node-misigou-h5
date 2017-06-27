@@ -1,0 +1,124 @@
+<!DOCTYPE HTML >  
+<html>  
+    <head>  
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+        <title>Index</title>  
+        <script src="template.js"></script>  
+    </head>  
+    <body>  
+        <div id="content"></div>  
+        <script id="test" type="text/html">  
+           
+                <h1>{{title}}</h1>  
+                <ul>  
+                    {{each list as value index}}  
+                        <li>索引：{{index}}:{{value}}</li>  
+                    {{/each}}  
+                </ul>  
+           
+        </script>  
+        <script>  
+            var data = {  
+                title : 'HELLO WORLD',  
+                isAdmin : true,  
+                list : ['新闻','军事','历史','政治']  
+            };  
+            var html = template('test', data);  
+            document.getElementById("content").innerHTML = html;  
+        </script>  
+        <hr/>no-escape 不转义HTML  
+        <div id="div_noescape"></div>  
+        <script id="no_escape" type="text/html">  
+            <p>不转义：{{#text}}</p>  
+            <p>默认转义： {{text}}</p>  
+        </script>  
+        <script>  
+            var data_noEscape = {  
+                text: '<span style="color:#F00">hello world!</span>'  
+            };  
+            var html_noescape = template("no_escape", data_noEscape);  
+            document.getElementById("div_noescape").innerHTML = html_noescape;  
+        </script>  
+        <hr/> 在javascript中存放模板  
+        <div id="div_complie"></div>  
+        <script>  
+            var source = '<ur>' +  
+                '{{each list}}'+  
+                    '<li>索引：{{$index+1}}:{{$value}}</li>'+  
+                '{{/each}}'+  
+            '</ul>';  
+            var data = {  
+                list : ['电影','电视剧','综艺','音乐']  
+            };  
+            var render = template.compile(source);  
+            var html = render(data);  
+            document.getElementById("div_complie").innerHTML = html;  
+        </script>  
+        <hr/> 嵌入子模板(include)  
+        <div id="div_include"></div>  
+        <script id="include" type="text/html">  
+            {{include 'test'}}            
+        </script>  
+        <script>  
+            document.getElementById("div_include").innerHTML = html;  
+        </script>  
+        <hr/>辅助方法  
+        <script id="helper" type="text/html">  
+            {{time | xx:'yyyy年 MM月 dd日 hh:mm:ss'}}  
+        </script>  
+        <div id="div_helper"></div>  
+        <script>  
+            /**   
+             * 对日期进行格式化，  
+             * @param date 要格式化的日期  
+             * @param format 进行格式化的模式字符串  
+             *     支持的模式字母有：  
+             *     y:年,  
+             *     M:年中的月份(1-12),  
+             *     d:月份中的天(1-31),  
+             *     h:小时(0-23),  
+             *     m:分(0-59),  
+             *     s:秒(0-59),  
+             *     S:毫秒(0-999),  
+             *     q:季度(1-4)  
+             * @return String  
+             */  
+            function dateFormat(date, format){  
+              
+                date = new Date(date);  
+                var map = {  
+                    "M": date.getMonth() + 1, //月份   
+                    "d": date.getDate(), //日   
+                    "h": date.getHours(), //小时   
+                    "m": date.getMinutes(), //分   
+                    "s": date.getSeconds(), //秒   
+                    "q": Math.floor((date.getMonth() + 3) / 3), //季度   
+                    "S": date.getMilliseconds() //毫秒   
+                };  
+                  
+                format = format.replace(/([yMdhmsqS])+/g, function(all, t){  
+                    var v = map[t];  
+                    if (v !== undefined) {  
+                        if (all.length > 1) {  
+                            v = '0' + v;  
+                            v = v.substr(v.length - 2);  
+                        }  
+                        return v;  
+                    }  
+                    else if (t === 'y') {  
+                            return (date.getFullYear() + '').substr(4 - all.length);  
+                        }  
+                    return all;  
+                });  
+                return format;  
+            }  
+            var data = {  
+                time: 1408536771253,  
+            };  
+            template.helper("xx", dateFormat);  
+            var html = template('helper', data);  
+            document.getElementById('div_helper').innerHTML = html;  
+//          document.getElementById("div_helper").innerHTML = dateFormat(new Date());  
+        </script>  
+    </body>  
+</html>  

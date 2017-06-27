@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		
+		<link rel="stylesheet" type="text/css" href="../../public/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../../public/css/home.css"/>
+		<link rel="stylesheet" type="text/css" href="../../public/css/loyout.css"/>
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_3krdwzlb4xcg14i.css"/>
+	</head>
+	<body>
+		<div class="layout">
+			<div class="home-header">
+				<div class="wrap clear">
+					<div class="left"><h1>蜜思购</h1></div>
+					<div class="center left">
+						<span>全网比价<i class="icon iconfont icon-iconfontdian1"></i>折扣</span>
+						<em>www.misigou.com</em>
+					</div>
+					<div class="right">
+						<i class="icon iconfont icon-yonghu"></i>
+					</div>
+				</div>
+			</div>
+			<div class="serach">
+				<form action="" method="post">
+					<input type="text" name="" id="" value="" placeholder="请输入你想比价的商品"/>
+					<input type="button" value="搜索"/>
+				</form>
+			</div>
+			
+			<div class="content">
+				<div class="wrap">
+					<h2><span>首页 > </span><span>电视  > </span><span>乐视S50> </span></h2>
+					<div class="con-box">
+						<!--<h3>乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</h3>
+						<img src="../../public/img/gengduo.png"/>-->
+					</div>	
+					<div class="box">
+						<div class="sub-nav">
+							<a href="#">比价购买</a>
+							<a href="#">产品参数</a>
+							<a href="#">评价(2222)</a>
+						</div>
+						<div class="sub-box">
+							<div class="price">
+								<ul>
+									<li><a href="#">
+										<span>京东商城</span><i  class="right">去购买</i><em class="right">￥ 1999.00</em>
+									</a></li>
+									<li><a href="#">
+										<span>京东商城</span><i  class="right">去购买</i><em class="right">￥ 1999.00</em>
+									</a></li>
+									<li><a href="#">
+										<span>京东商城</span><i  class="right">去购买</i><em class="right">￥ 1999.00</em>
+									</a></li>
+								</ul>
+								<div class="tips">
+									<p>*实际价格以各网站列出的实时售价为准,我们提供的价格可能有数小时至数日的延迟</p>
+								</div>
+							</div>
+							<div class="key">
+								<p>三无产品,请勿购买</p>
+								<p>您的手机已中毒，请立刻重启</p>
+							</div>
+							<div class="com-box">
+								<!--<div class="comment">
+									<h4><span class="username">大黄咬她</span><i>2013/01/07</i></h4>
+									<p>购买自 : <span>京东商城</span></p>
+									<p>
+										衣服裤子都收到了，很喜欢，做工质地都好，价格也便宜呀，难得哦，是棉麻的，夏天穿很舒服，呵呵，服务态度也超好， 很有心的店家，以后常光顾
+									</p>
+								</div>-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="footer">
+				<div class="wrap">
+					<ul>
+						<li><a href="#">用户中心</a></li>
+						<li><a href="#">商家中心</a></li>
+						<li><a href="#"><i class="icon iconfont icon-fanhuidingbu"></i>返回顶部</a></li>
+					</ul>
+					<p><span>手机APP下载</span>蜜思购手机版--掌上比价平台</p>
+					<p><em>www.misigou.com</em></p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/html" id="tmp">
+		{{each result as value index}}  
+        	<h3>{{ #value.productName }}</h3>
+			{{ #value.productImg }}
+		{{/each}}
+	</script>
+	<script type="text/html" id="tmp1">
+		{{each result as value index}}  
+        	<div class="comment" data-comid={{ #value.comId }}>
+				<h4><span class="username">{{ #value.comName }}</span><i>{{ #value.comTime }}</i></h4>
+				<p><span>{{ #value.comFrom }}</span></p>
+				<p>
+					{{ #value.comContent }}
+				</p>
+			</div>
+		{{/each}}
+	</script>
+	<script src="../../public/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../public/js/template.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../public/js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../public/js/getData.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../public/js/tool.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../public/js/bijia-con.js" type="text/javascript" charset="utf-8"></script>
+</html>

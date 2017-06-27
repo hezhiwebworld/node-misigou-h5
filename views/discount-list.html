@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		
+		<link rel="stylesheet" type="text/css" href="../public/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/home.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/loyout.css"/>
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_ikcd8itchaor.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/gnzk.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/sqk.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/bcj.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/discount.css"/>
+	</head>
+	<body>
+		<div class="layout">
+			<div class="home-header">
+				<div class="wrap clear">
+					<div class="left"><i class="icon iconfont icon-houtui"></i></div>
+					<span>白菜价-淘宝内部券</span>
+				</div>
+			</div>
+			<!--提示-->
+			<div class="food-tip">
+				<p>--点餐前出示手机中的优惠卷,即可享受优惠--</p>
+			</div>
+			<!--提示-->
+			<div class="list discount">
+				<div class="wrap">
+					<div class="items" id="discount-box">
+						<div class="item clear">
+							<div class="item-left">
+								<img src="../../public/img/haitao.png"/>
+							</div>
+							<div class="item-right">
+								<p>乐事TVS50 Air全配版2D 50隐村全高清LED液晶电视</p>
+								<span>￥1999.00</span>
+								<p>有效期至10月31日</p>
+								
+							</div>
+						</div>
+						<div class="item clear">
+							<div class="item-left">
+								<img src="../../public/img/haitao.png"/>
+							</div>
+							<div class="item-right">
+								<p>乐事TVS50 Air全配版2D 50隐村全高清LED液晶电视</p>
+								<span>￥1999.00</span>
+								<p>有效期至10月31日</p>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="footer">
+				<div class="wrap">
+					<ul>
+						<li><a href="#">用户中心</a></li>
+						<li><a href="#">商家中心</a></li>
+						<li><a href="#"><i class="icon iconfont icon-fanhuidingbu"></i>返回顶部</a></li>
+					</ul>
+					<p><span>手机APP下载</span>蜜思购手机版--掌上比价平台</p>
+					<p><em>www.misigou.com</em></p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/html" id="tmp">
+		{{ each result as value index }}
+		<div class="item clear">
+			<div class="item-left">
+				
+				{{ #value.couponProductImg }}
+			</div>
+			<div class="item-right">
+				<p>{{ #value.couponProductName }}</p>
+				<span>{{ #value.couponProductPrice }}</span>
+				<p>{{ #value.couponProductTime }}</p>
+				
+			</div>
+		</div>
+		 {{ /each }}
+	</script>
+	<script src="../public/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/template.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/getData.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/tool.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/discount-list.js" type="text/javascript" charset="utf-8"></script>
+</html>

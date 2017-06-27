@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../public/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/home.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/loyout.css"/>
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_ikcd8itchaor.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/gnzk.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/sqk.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/sum.css"/>
+	</head>
+	<body>
+		<div class="layout">
+			<div class="home-header">
+				<div class="wrap clear">
+					<div class="left"><i class="icon iconfont icon-houtui"></i></div>
+					<span>凑单品</span>
+				</div>
+			</div>
+			
+			<div class="sub-nav sum">
+				<div class="box" id="sum-box1">
+					<ul id="shop-list1" style="display: none;">
+						<li><a href="#">京东</a></li>
+						<li><a href="#">京东</a></li>
+						<li><a href="#">京东</a></li>
+					</ul>
+					<ul id="shop-list2" style="display: none;">
+						<li><a href="#">华东</a></li>
+						<li><a href="#">华南</a></li>
+						<li><a href="#">京东</a></li>
+					</ul>
+					<ul id="shop-list3">
+						<li><a href="#">全部价格</a></li>
+						
+					</ul>
+				</div>
+			</div>
+			
+			<div class="gnzk-content sum">
+				<div class="wrap">
+					<div class="lists">
+						<ul class="clear" id="sum-box">
+							<li><a href="#">
+								<img src="../public/img/test.png"/>
+								<p class="ellipsis">西域梅隆新疆特产五星和田红枣</p>
+								<p>￥1.00 <span>去凑单</span></p>
+							</a></li>
+							<li><a href="#">
+								<img src="../public/img/test.png"/>
+								<p class="ellipsis">西域梅隆新疆特产五星和田红枣</p>
+								<p>￥1.00 <span>去凑单</span></p>
+							</a></li>
+							<li><a href="#">
+								<img src="../public/img/test.png"/>
+								<p class="ellipsis">西域梅隆新疆特产五星和田红枣</p>
+								<p>￥1.00 <span>去凑单</span></p>
+							</a></li>
+						</ul>
+						
+					</div>
+					<!--国内折扣-->
+					<div class="line"></div>
+				</div>
+			</div>
+			<!--公用头部-->
+			<div class="footer">
+				<div class="wrap">
+					<ul>
+						<li><a href="#">用户中心</a></li>
+						<li><a href="#">商家中心</a></li>
+						<li><a href="#"><i class="icon iconfont icon-fanhuidingbu"></i>返回顶部</a></li>
+					</ul>
+					<p><span>手机APP下载</span>蜜思购手机版--掌上比价平台</p>
+					<p><em>www.misigou.com</em></p>
+				</div>
+			</div>
+		
+		
+		</div>
+	</body>
+	<script type="text/html" id="tmp1">
+		{{ each result as value index }}
+			<li><a href="#" data-shop-id={{ #value.shopId }}>{{ #value.shopName }}</a></li>
+		{{ /each }}
+	</script>
+	<script type="text/html" id="tmp2">
+		{{ each result as value index }}
+			<li><a href="#" data-shop-id={{ #value.areaId }}>{{ #value.areaName }}</a></li>
+		{{ /each }}
+	</script>
+	
+	<script type="text/html" id="tmp3">
+		{{ each result as value index }}
+		<li data-product-id={{ #value.productId }}><a href="#" data-product-id={{ #value.productId }}>
+			
+			<img src={{ #value.productImg }} />
+			<p class="ellipsis">{{ #value.productName }}</p>
+			<p>{{ #value.productPrice }} <span>去凑单</span></p>
+		</a></li>
+		 {{ /each }}
+	</script>
+	<script src="../public/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/template.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/getData.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/tool.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/sum.js" type="text/javascript" charset="utf-8"></script>
+</html>

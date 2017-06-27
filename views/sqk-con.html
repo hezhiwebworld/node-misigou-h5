@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../public/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/home.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/loyout.css"/>
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_ikcd8itchaor.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/sqk.css"/>
+		
+	</head>
+	<body>
+		<div class="layout">
+			<div class="home-header">
+				<div class="wrap clear">
+					<div class="left"><i class="icon iconfont icon-houtui"></i></div>
+					<span>国内折扣</span>
+				</div>
+			</div>
+			<div class="sqk-content">
+				<div class="wrap">
+					<!--内容页-->
+					<div id="sqk-box">
+						<h3>移动端凑单品 ： 海天鲜味生抽 1.28L</h3>
+						<p>
+							<span>京东商城</span>
+							<span>10-25</span>
+							<span>12:10</span>
+							<span>admin</span>
+							<span>/蜜思购</span>
+						</p>
+						<div class="box">
+							<article class="clear">
+								<img src="../public/img/haitao.png"/>
+								阿里字库所发布的字体版权归原作者所有，任何商业用途均须联系作者。如未经授权用作他处，作者将保留追究侵权者法律责任的权利。
+							</article>
+							<p>阿里字库所发布的字体版权归原作者所有</p>
+							<img src="../public/img/ic_bcj.png" class="l-small"/>
+							<div class="address">
+								<ul>
+									<li>北京<a href="">有货</a></li>
+									<li>北京<a href="">有货</a></li>
+									<li>北京<a href="">有货</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--内容页-->
+				</div>
+			</div>
+			<!--公用头部-->
+			<div class="footer">
+				<div class="wrap">
+					<ul>
+						<li><a href="#">用户中心</a></li>
+						<li><a href="#">商家中心</a></li>
+						<li><a href="#"><i class="icon iconfont icon-fanhuidingbu"></i>返回顶部</a></li>
+					</ul>
+					<p><span>手机APP下载</span>蜜思购手机版--掌上比价平台</p>
+					<p><em>www.misigou.com</em></p>
+				</div>
+			</div>
+		
+		
+		</div>
+	</body>
+	<script type="text/html" id="tmp">
+		{{ each result as value index }}
+		<h3 data-product-id={{ #value.productId }}>{{ #value.productName }}</h3>
+		<p>
+			<span>{{ #value.productFrom }}</span>
+			<span>{{ #value.productTime }}</span>
+			<span>{{ #value.productTips }}</span>
+		</p>
+		<div class="box">
+			<article class="clear">
+				{{ #value.productImgSm }}
+				{{ #value.productInfo2 }}
+			</article>
+			
+			{{ #value.productImg2 }}
+			<div class="address">
+				<ul>
+					<li>北京<a href="">有货</a></li>
+					<li>北京<a href="">有货</a></li>
+					<li>北京<a href="">有货</a></li>
+				</ul>
+			</div>
+		</div>
+		{{ /each }}
+	</script>
+	<script src="../public/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/template.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/getData.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/tool.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/sqk-con.js" type="text/javascript" charset="utf-8"></script>
+</html>

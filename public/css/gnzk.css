@@ -1,0 +1,75 @@
+.gnzk-content {
+  height: 100%;
+  padding-bottom: 2rem;
+  background-color: #fff;
+}
+.gnzk-content .wrap {
+  position: relative;
+  height: 100%;
+}
+.gnzk-content .wrap ul li {
+  width: 50%;
+  float: left;
+  border-bottom: 1px solid #CCCCCC;
+  height: 10rem;
+}
+.gnzk-content .wrap ul li a {
+  display: block;
+  padding: 0.5rem;
+}
+.gnzk-content .wrap ul li a img {
+  width: 80%;
+}
+.gnzk-content .wrap ul li a p {
+  font-size: 0.6rem;
+  line-height: 1rem;
+}
+.gnzk-content .wrap ul li a p:nth-of-type(1) {
+  font-size: 0.7rem;
+  color: black;
+  font-weight: bold;
+}
+.gnzk-content .wrap ul li a p:nth-of-type(2) {
+  color: #FF5401;
+}
+.gnzk-content .wrap ul li a p:nth-of-type(3) {
+  color: gray;
+}
+.gnzk-content .wrap ul li a p:nth-of-type(3) span {
+  color: gray;
+}
+.gnzk-content .wrap ul li a p:nth-of-type(3) i {
+  color: gray;
+}
+.gnzk-content .wrap .line {
+  width: 1px;
+  background-color: #CCCCCC;
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0px;
+}
+.goshop {
+  position: relative;
+  padding: 0.5rem;
+}
+.goshop .input {
+  position: absolute;
+}
+.goshop label {
+  display: block;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  width: 100%;
+  background-color: #3995FC;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px ;
+}
+.sqk-content .wrap .box .erweima {
+  margin-top: 2rem;
+}
+.sqk-content .wrap .box .erweima img {
+  width: 100%;
+}

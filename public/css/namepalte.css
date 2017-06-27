@@ -1,0 +1,39 @@
+.nameplate .wrap .item h2 {
+  font-size: 0.7rem;
+  border: 1px solid #EEEEEE;
+}
+.nameplate .wrap .item h2 i.icon {
+  margin-left: 8rem ;
+  font-size: 1rem;
+}
+.nameplate {
+  background-color: #fff;
+}
+.nameplate .wrap .item h2 {
+  background-color: #0096FF;
+  border: none;
+  border-bottom: 1px solid #CCCCCC;
+  padding-left: 0.5rem;
+  color: white;
+}
+.nameplate .wrap .item .item-box ul div {
+  border-bottom: 1px dotted #CCCCCC;
+}
+.nameplate .wrap .item .item-box ul div a {
+  display: block;
+  padding: 0.5rem;
+}
+.nameplate .wrap .item .item-box ul div a span {
+  font-size: 0.8rem;
+}
+.nameplate .wrap .item .item-box ul div a i {
+  font-size: 0.7rem;
+}
+/*销量排行榜央视*/
+#name-box2 .item-box .item-left {
+  padding-right: 0.5rem;
+}
+#name-box2 .item-box .item-right {
+  overflow: hidden;
+  font-size: 0.6rem;
+}

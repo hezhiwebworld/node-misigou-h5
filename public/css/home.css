@@ -1,0 +1,127 @@
+.home-header {
+  width: 100%;
+  background: #0096FF;
+  height: 2.5rem;
+}
+.home-header .wrap {
+  height: 2.5rem;
+  padding-top: 0.5rem;
+}
+.home-header .wrap .left {
+  padding-left: 0.75rem;
+  height: 1.25rem;
+}
+.home-header .wrap .left h1 {
+  font-size: 1.25rem;
+  color: white;
+}
+.home-header .wrap .center {
+  font-size: 0.5rem;
+  width: 6.5rem;
+  margin-top: 10px;
+}
+.home-header .wrap .center span {
+  color: white;
+  letter-spacing: 0.15rem;
+}
+.home-header .wrap .center span i {
+  color: white;
+}
+.home-header .wrap .center em {
+  color: white;
+  display: block;
+  margin-top: -0.25rem;
+}
+.home-header .wrap .right {
+  height: 2rem;
+  width: 2rem;
+}
+.home-header .wrap .right .iconfont {
+  color: white;
+  font-size: 1.25rem;
+}
+.serach {
+  padding: 0.5rem;
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+}
+.serach form {
+  width: 100%;
+}
+.serach form input:nth-child(1) {
+  width: 75%;
+  height: 1.25rem;
+  border-radius: 10px;
+  padding-left: 0.5rem;
+  font-size: 0.6rem;
+  vertical-align: bottom;
+}
+.serach form input:nth-child(2) {
+  width: 20%;
+  height: 1.25rem;
+  background: #0096FF;
+  color: white;
+  border-radius: 10px;
+  margin-left: 0.25rem;
+  font-size: 0.8rem;
+  vertical-align: bottom;
+}
+.home-nav {
+  background-color: #fff;
+  padding: 0.5rem;
+}
+.home-nav .wrap {
+  width: 100%;
+}
+.home-nav .wrap ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.home-nav .wrap ul li {
+  width: 25%;
+  margin-top: 0.9rem;
+}
+.home-nav .wrap ul li a {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.home-nav .wrap ul li a img {
+  width: 2.5rem;
+}
+.home-nav .wrap ul li a p {
+  font-size: 0.6rem;
+  line-height: 1rem;
+}
+.home-hot {
+  background-color: #fff;
+}
+.home-hot .wrap h2 {
+  font-size: 0.8rem;
+  background: #0096FF;
+  height: 1.75rem;
+  color: white;
+  padding-left: 0.5rem;
+}
+.home-hot .wrap .items .item {
+  padding: 0.5rem;
+  border-bottom: 1px solid #CCCCCC;
+}
+.home-hot .wrap .items .item .item-left {
+  width: 25% ;
+  float: left;
+}
+.home-hot .wrap .items .item .item-left img {
+  width: 100%;
+}
+.home-hot .wrap .items .item .item-right {
+  overflow: hidden;
+}
+.home-hot .wrap .items .item .item-right p {
+  font-size: 0.5rem;
+  margin-top: 0.25rem;
+}
+.home-hot .wrap .items .item .item-right p:nth-child(1) {
+  font-size: 0.7rem;
+}

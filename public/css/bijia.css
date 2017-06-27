@@ -1,0 +1,31 @@
+.bj-content .wrap .item {
+  background-color: #fff;
+}
+.bj-content .wrap .item h2 {
+  height: 2rem;
+  background-color: #EDEDED;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+.bj-content .wrap .item h2 .icon {
+  margin-left: 10rem;
+}
+.bj-content .wrap .item .item-box {
+  font-size: 0.7rem;
+}
+.bj-content .wrap .item .item-box ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+}
+.bj-content .wrap .item .item-box ul li {
+  width: 33.33%;
+  height: 1.9rem;
+  line-height: 1.9rem;
+}
+.bj-content .wrap .item .item-box ul li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}

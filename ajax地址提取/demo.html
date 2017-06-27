@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script src="./common/Route.js"></script>
+    <script>
+        (function() {
+            // renderNav();
+
+            // nav 导航栏的 渲染
+            function renderNav() {
+            	Route.getindexmenu(function(data) {
+            		var htmlStr = template( "mobanid", data );
+                    $('navUl').html( htmlStr );
+            	})
+                // 获取数据并渲染
+                getNavData(function( data ) {
+                    // 拿到数据利用模板进行 渲染
+                    // data 是一个对象，且模板会遍历这个对象的所有属性，并作为变量添加到模板中
+                    var htmlStr = template( "mobanid", data );
+                    $('navUl').html( htmlStr );
+                })
+            }
+
+            // nav 导航栏的数据获取
+            function getNavData( callback ) {
+                var url = Route.baseUrl + '/api/getindexmenu'
+                // 请求 导航栏数据 
+                $.ajax({
+                    url: url,
+                    data: {},
+                    type: "get",
+                    dataType: 'json',
+                    success: function( data ) {
+                        callback( data );
+                    }
+                })
+            }
+
+        })();
+        
+    </script>
+</body>
+</html>

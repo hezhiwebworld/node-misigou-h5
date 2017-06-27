@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../public/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/home.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/loyout.css"/>
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_quidp3cx2clkgldi.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/bijia.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/home.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/loyout.css"/>
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_ikcd8itchaor.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/gnzk.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/sqk.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/sum.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/namepalte.css"/>
+		
+	</head>
+	<body>
+		<div class="layout">
+			<div class="home-header">
+				<div class="wrap clear">
+					<div class="left"><i class="icon iconfont icon-houtui"></i></div>
+					<span>全部分类</span>
+				</div>
+			</div>
+			
+			<div class="serach">
+				<form action="" method="post">
+					<input type="text" name="" id="" value="" placeholder="请输入你想比价的商品"/>
+					<input type="button" value="搜索"/>
+				</form>
+			</div>
+			<div class="nameplate">
+				<div class="wrap" >
+					<div class="item">
+						<h2>平板电视哪个好<i class="icon iconfont  icon-xiangxiajiantou"></i></h2>
+						<!--style="display: none;"-->
+						<div class="item-box">
+							<ul class="clear" id="name-box1">
+								<li><a href="#">电视</a></li>
+								<li><a href="#">空调</a></li>
+								<li><a href="#">冰箱</a></li>
+								<li><a href="#">热水器</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--销量排行榜-->
+					<div class="item" >
+						<h2>平板电视销量排行榜<i class="icon iconfont  icon-xiangxiajiantou"></i></h2>
+						<!--style="display: none;"-->
+						<div id="name-box2">
+							<div class="item-box">
+								 <div class="item-left">
+								 	<img src="" alt="" />
+								 </div>
+								 <div class="item-right">
+								 	<p>标题</p>
+								 	<p>钱2222</p>
+								 	<p>报价(6) <span>评论(2222)</span></p>
+								 </div>
+							</div>
+						</div>
+					</div>
+					<!--最新评论-->
+					<div class="new-comment">
+						<h2>平板电视最新评论</h2>
+						<div class="wrap" id="name-box3">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--公用头部-->
+			<div class="footer">
+				<div class="wrap">
+					<ul>
+						<li><a href="#">用户中心</a></li>
+						<li><a href="#">商家中心</a></li>
+						<li><a href="#"><i class="icon iconfont icon-fanhuidingbu"></i>返回顶部</a></li>
+					</ul>
+					<p><span>手机APP下载</span>蜜思购手机版--掌上比价平台</p>
+					<p><em>www.misigou.com</em></p>
+				</div>
+			</div>
+		
+		
+		</div>
+	</body>
+	<!--平板电视排行榜-->
+	<script type="text/html" id="tmp1">
+		{{ each result as value index }}
+			
+		<div><a href="#">
+			<span> {{ #value.brandName }} </span><br />
+			<i> {{ #value.brandInfo }} </i>
+		</a></div>
+			
+		{{ /each }}
+	</script>
+	<!--平面电视销量排行榜-->
+	<script type="text/html" id="tmp2">
+		{{ each result as value index }}
+		<div class="item-box clear" data-product-id={{ #value.productId }} data-brand-id={{ #value.brandId }} data-brandTitle-id={{ #value.brandTitleId }} data-category-id={{ #value.categoryId }}>
+			 <div class="item-left left">
+			 	{{ #value.productImg }}
+			 </div>
+			 <div class="item-right">
+			 	<p>{{ #value.productName }}</p>
+			 	<p>{{ #value.productPrice }}</p>
+			 	<p>{{ #value.productQuote }} <span>{{ #value.productCom }}</span></p>
+			 </div>
+		</div>
+		{{ /each }}
+	</script>
+	<!--评论排行榜-->
+	<script type="text/html" id="tmp3">
+		{{ each result as value index }}
+		
+			<div class="wrap">
+				<div class="com-left">
+					<img src="../images/haitao.png" alt="" />
+				</div>
+				<div class="com-right">
+					<p>雷氏最新ssssssssss</p>
+				</div>
+			</div>
+			<div class="com-content">
+				<p><span>{{ #value.comName }}</span><span>{{ #value.comTime }}</span></p>
+				<p>{{ #value.comContent }}</p>
+			</div>
+			
+		{{ /each }}
+	</script>
+	
+	<script src="../public/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/template.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/getData.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/tool.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/nameplate-list.js" type="text/javascript" charset="utf-8"></script>
+</html>
