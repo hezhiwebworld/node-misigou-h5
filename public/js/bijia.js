@@ -9,22 +9,22 @@
 	$(function(){
 		//渲染比价分类
 		getData( baseUrl+'/api/getcategorytitle','',function(res){
-			console.log(res);
+			//console.log(res);
 			var html = template('tmp',res)
 			$('#bj').html(html);
 			//等页面渲染完成在获取目标元素
-			getcategory('.item');
+			$('#bj').find('.item').each(function(index,value){
+				getcategory(value);
+				$(this).find('div').addClass('hide');
+			})
 		});
 		
 		//渲染分类
-		function getcategory( selector){
-			var that = this;
-			$(selector).on('click',function(){
-				var target = this
+		function getcategory(target){
 				//获取自定义属性
+				//console.log(target)
 				//var id = $(this).attr('data-title-id');
-				var id= $(this).data('title-id');
-				
+				var id= $(target).attr('data-title-id');
 				getData( baseUrl+'/api/getcategory',{titleid : id },function(res){
 					console.log(res);
 					var html = ''
@@ -33,17 +33,17 @@
 						var targeturl = 'content/list.html?';
 						var temp = tools.query({
 							categoryid : this.categoryId,
-							category :  this.category,
-							pageid : 0 
+							category : this.category,
+							pageid : 1 
 						})
 						targeturl = targeturl +temp
 						
 						html += '<li><a href='+targeturl + ' ' + 'data-category-id= '+this.categoryId+'>'+ this.category+'</a></li>';
 					});
-					console.log(html)
+					//console.log(html)
 					$(target).find('ul').html(html)
 				});
-			})
+			
 		}
 		
 		

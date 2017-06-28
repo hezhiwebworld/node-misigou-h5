@@ -17,10 +17,9 @@
   font-size: 0.7rem;
   width: 3rem;
 }
-.list .sub-nav .wrap a i.icur {
+.list .sub-nav .wrap a i {
   display: inline-block;
   height: 1.75rem;
-  border-bottom: 2px solid red;
 }
 .list .wrap .items .item .item-right p {
   font-size: 0.6rem;
@@ -91,4 +90,7 @@
 }
 .list .wrap .items .item .item-right .add .col-2 a {
   color: white;
+}
+.icur {
+  border-bottom: 2px solid red;
 }

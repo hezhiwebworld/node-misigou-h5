@@ -40,4 +40,30 @@
 		});
 	})
 	
+	//导航条二级菜单特效
+	$(function(){
+		$('.nav-box').on('click','li',function(){
+			var index = $(this).index();
+			var target = $('#sum-box1').find('ul').eq(index);
+			target.hide().siblings().hide();
+			target.show()
+		})
+		
+		$('#shop-list1').on('click','li',function(){
+			var name = $(this).data('shop-name');
+			$('.shop').html(name)
+			$('#shop-list1').hide();
+		})
+		
+		$('#shop-list2').on('click','li',function(){
+			var name = $(this).data('area-name');
+			$('.area').html(name)
+			$('#shop-list2').hide();
+		})
+		
+	
+		
+	})
+	
+	
 })(window)

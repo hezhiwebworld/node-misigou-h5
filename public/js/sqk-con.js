@@ -16,7 +16,9 @@
 			console.log(res)
 			var html = template('tmp',res)
 			
-			$('#sqk-box').html(html)
+			$('#sqk-box').html(html);
+			
+			$('#comment').html(res.result[0].productComment)
 		});
 		
 		

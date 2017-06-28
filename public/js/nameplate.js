@@ -17,15 +17,18 @@
 			console.log(res)
 			var html = template('tmp1',res);
 			$('#name-box').html(html);
-			getbrand();
+			
+			$('#name-box').find('h2').each(function(index,value){
+				 getbrand(value)
+			})
 		});
 		//渲染列表内容
 		
-		function getbrand(){
+		function getbrand(target){
 			
-			$('#name-box').find('h2').on('click',function(){
-				var that = this;
-				var id  = $(this).data('brandtitle-id');
+			
+			
+				var id  = $(target).data('brandtitle-id');
 				var data = {
 					brandtitleid : id
 				}
@@ -34,18 +37,27 @@
 					
 					var arr = res.result;
 					var html =""
+					//拼接字符串
+					var url = "nameplate-con.html?" + tools.query(data)
 					$.each(arr, function(index,value) {
 						
-						html += '<li><a href="#">'+this.brandName+'</a></li>'
-						console.log(html)
+						html += '<li><a href='+url+'>'+this.brandName+'</a></li>'
+						//console.log(html)
 					});
 					
-					$(that).siblings('div').find('.list').html(html);
+					$(target).siblings('div').find('.list').html(html);
 				});
-			});
+			
 			
 		}
 		
 	})
+	
+	$(function(){
+		$('#name-box').on('click','h2',function(){
+			$(this).parent().find('.item-box').toggleClass('hide');
+		})
+	})
+	
 	
 })(window)

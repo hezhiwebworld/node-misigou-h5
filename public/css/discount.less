@@ -54,3 +54,64 @@
         text-align: center;
     }
 }
+
+
+.discount-layout{
+    position: relative;
+    .layer{
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0,0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        .mark{
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            left:10/20rem;
+            right:10/20rem;
+            padding-top: 50%;
+            margin: auto;
+            .mark-left{
+                background-color: rgba(255,255,255,0.5);
+                width: 50/20rem;
+                height: 50/20rem;
+                 align-self :center;
+                i{
+                  font-size: 40/20rem;  
+                }
+               
+            }
+            .mark-right{
+                background-color: rgba(255,255,255,0.5);
+                width: 50/20rem;
+                height: 50/20rem;
+                 align-self :center;
+                i{
+                     font-size: 40/20rem;  
+                }
+            }
+            .mark-center{
+               width: 150/20rem;
+              // height: 150/20rem;
+               align-self :center;
+               overflow: hidden;
+               ul{
+                   width: 10000%;
+                   li{
+                      width: 1%;
+                      float: left;
+                       a{
+                           display: block;
+                            width: 100%;
+                           img{
+                                width: 100% ;
+                           }
+                       }
+                   }
+               }
+            }
+        }
+    }
+}

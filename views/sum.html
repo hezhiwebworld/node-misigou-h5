@@ -23,20 +23,19 @@
 			</div>
 			
 			<div class="sub-nav sum">
+				<div class="nav-box">
+					<ul>
+						<li class="shop ellipsis">京东</li>
+						<li class="area ellipsis">华东</li>
+						<li>全部价格</li>
+					</ul>
+				</div>
 				<div class="box" id="sum-box1">
-					<ul id="shop-list1" style="display: none;">
-						<li><a href="#">京东</a></li>
-						<li><a href="#">京东</a></li>
-						<li><a href="#">京东</a></li>
+					<ul id="shop-list1" class="hide">
 					</ul>
-					<ul id="shop-list2" style="display: none;">
-						<li><a href="#">华东</a></li>
-						<li><a href="#">华南</a></li>
-						<li><a href="#">京东</a></li>
+					<ul id="shop-list2" class="hide">
 					</ul>
-					<ul id="shop-list3">
-						<li><a href="#">全部价格</a></li>
-						
+					<ul id="shop-list3" class="hide">
 					</ul>
 				</div>
 			</div>
@@ -85,12 +84,12 @@
 	</body>
 	<script type="text/html" id="tmp1">
 		{{ each result as value index }}
-			<li><a href="#" data-shop-id={{ #value.shopId }}>{{ #value.shopName }}</a></li>
+			<li data-shop-id={{ #value.shopId }} data-shop-name={{ #value.shopName }}><a href="#" data-shop-name={{ #value.shopName }}  data-shop-id={{ #value.shopId }}>{{ #value.shopName }}</a></li>
 		{{ /each }}
 	</script>
 	<script type="text/html" id="tmp2">
 		{{ each result as value index }}
-			<li><a href="#" data-shop-id={{ #value.areaId }}>{{ #value.areaName }}</a></li>
+			<li data-shop-id={{ #value.areaId }} data-area-name={{ #value.areaName }}><a href="#" data-area-name={{ #value.areaName }} data-shop-id={{ #value.areaId }}>{{ #value.areaName }}</a></li>
 		{{ /each }}
 	</script>
 	

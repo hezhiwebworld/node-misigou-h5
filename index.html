@@ -3,12 +3,13 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title></title>
-		
+		<title>蜜思购</title>
 		<link rel="stylesheet" type="text/css" href="public/css/common.css"/>
 		<link rel="stylesheet" type="text/css" href="public/css/home.css"/>
 		<link rel="stylesheet" type="text/css" href="public/css/loyout.css"/>
 		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_ssmfapj41hq9qkt9.css"/>
+		<link rel="shortcut icon"  href="favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="public/css/page.css"/>
 	</head>
 	<body>
 		<div class="layout">
@@ -41,6 +42,13 @@
 					</div>
 				</div>
 			</div>
+			<!--分页结构-->
+			<div class="page">
+				 <ul class="pagination">
+				   
+				  </ul>
+			</div>
+			<!--分页结构-->
 			<div class="footer">
 				<div class="wrap">
 					<ul>
@@ -59,7 +67,7 @@
 		<ul class="clear">
 			{{ each result as value index }}
 			<li>
-				<a href="#">
+				<a href="#" data-indexmenu-id={{ #value.indexmenuId }}>
 					{{ #value.img }}
 					<p>{{ #value.name }}</p>
 				</a>
@@ -75,7 +83,7 @@
 				{{ #value.productImgSm }}
 			</div>
 			<div class="item-right">
-				<p>{{ #value.productName }}</p>
+				<p class="ellipsis">{{ #value.productName }}</p>
 				<p><span>1.28L</span> / <i>{{ #value.productPinkage }}</i></p>
 				<p><span>{{ #value.productFrom }}</span><i>{{ #value.productTime }}</i></p>
 			</div>
@@ -88,4 +96,6 @@
 	<script src="public/js/rem.js" type="text/javascript" charset="utf-8"></script>
 	<script src="public/js/getData.js" type="text/javascript" charset="utf-8"></script>
 	<script src="public/js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script src="public/js/base.js" type="text/javascript" charset="utf-8"></script>
+	<script src="public/js/page.js" type="text/javascript" charset="utf-8"></script>
 </html>

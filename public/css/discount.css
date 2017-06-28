@@ -33,3 +33,60 @@
   color: #CCCCCC;
   text-align: center;
 }
+.discount-layout {
+  position: relative;
+}
+.discount-layout .layer {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.discount-layout .layer .mark {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  left: 0.5rem;
+  right: 0.5rem;
+  padding-top: 50%;
+  margin: auto;
+}
+.discount-layout .layer .mark .mark-left {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 2.5rem;
+  height: 2.5rem;
+  align-self: center;
+}
+.discount-layout .layer .mark .mark-left i {
+  font-size: 2rem;
+}
+.discount-layout .layer .mark .mark-right {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 2.5rem;
+  height: 2.5rem;
+  align-self: center;
+}
+.discount-layout .layer .mark .mark-right i {
+  font-size: 2rem;
+}
+.discount-layout .layer .mark .mark-center {
+  width: 7.5rem;
+  align-self: center;
+  overflow: hidden;
+}
+.discount-layout .layer .mark .mark-center ul {
+  width: 10000%;
+}
+.discount-layout .layer .mark .mark-center ul li {
+  width: 1%;
+  float: left;
+}
+.discount-layout .layer .mark .mark-center ul li a {
+  display: block;
+  width: 100%;
+}
+.discount-layout .layer .mark .mark-center ul li a img {
+  width: 100% ;
+}

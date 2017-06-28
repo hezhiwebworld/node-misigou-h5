@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="../../public/css/home.css"/>
 		<link rel="stylesheet" type="text/css" href="../../public/css/loyout.css"/>
 		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_3krdwzlb4xcg14i.css"/>
+		<link rel="stylesheet" type="text/css" href="../../public/css/page.css"/>
 	</head>
 	<body>
 		<div class="layout">
@@ -33,12 +34,18 @@
 			
 			<div class="list">
 				<div class="wrap">
-					<h2><span>首页 > </span><span>全部分类 > </span><span id="category">电视 > </span><i class="icon iconfont icon-fenlei"></i></h2>
+					<h2><span><a href="../../index.html">首页</a> > </span><span><a href="../bijia.html">全部分类</a> > </span><span id="category">电视 > </span><i class="icon iconfont icon-fenlei"></i></h2>
 					<div class="items" id="list-box">
 					</div>
 				</div>
 			</div>
-			
+			<!--分页结构-->
+			<div class="page">
+				 <ul class="pagination">
+				   
+				  </ul>
+			</div>
+			<!--分页结构-->
 			
 			<div class="footer">
 				<div class="wrap">
@@ -56,7 +63,7 @@
 	<script type="text/html" id="tmp">
 		
 		{{ each result as value index }}
-		<div class="item clear" data-product-id={{ #value.productId }}>
+		<div class="item clear" data-product-id={{ #value.productId }} data-category-id={{ #value.categoryId }}>
 			<!--包裹跳转-->
 			<a href="#">
 				<div class="item-left">
@@ -78,4 +85,7 @@
 	<script src="../../public/js/getData.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../../public/js/tool.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../../public/js/bijia-list.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../public/js/page.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../public/js/base.js" type="text/javascript" charset="utf-8"></script>
+	
 </html>

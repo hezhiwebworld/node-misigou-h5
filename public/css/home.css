@@ -109,8 +109,9 @@
   border-bottom: 1px solid #CCCCCC;
 }
 .home-hot .wrap .items .item .item-left {
-  width: 25% ;
+  width: 5rem;
   float: left;
+  padding-right: 0.5rem;
 }
 .home-hot .wrap .items .item .item-left img {
   width: 100%;
@@ -119,9 +120,10 @@
   overflow: hidden;
 }
 .home-hot .wrap .items .item .item-right p {
-  font-size: 0.5rem;
-  margin-top: 0.25rem;
+  font-size: 0.6rem;
+  line-height: 1rem;
 }
 .home-hot .wrap .items .item .item-right p:nth-child(1) {
   font-size: 0.7rem;
+  height: 2rem;
 }

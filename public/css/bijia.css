@@ -3,15 +3,21 @@
 }
 .bj-content .wrap .item h2 {
   height: 2rem;
-  background-color: #EDEDED;
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 2rem;
+  padding-right: 1rem;
+  background-color: #fff;
+  color: black;
+  padding-left: 1rem;
+  border-bottom: 1px dotted #CCCCCC;
 }
-.bj-content .wrap .item h2 .icon {
-  margin-left: 10rem;
+.bj-content .wrap .item h2 .icon::before {
+  float: right;
+  font-size: 1rem;
 }
 .bj-content .wrap .item .item-box {
   font-size: 0.7rem;
+  background-color: #f5f5f5;
 }
 .bj-content .wrap .item .item-box ul {
   display: flex;

@@ -19,27 +19,49 @@
 			$('#nav-box').html(html);
 			//手动给a标签添加链接
 			$('#nav-box').find('a').each(function(index,value){
+				if(index > 7 ){
+					$(this).hide()
+				}
 				$(this).attr('href',arr[index])
 			})
 		});
-		//渲染列表
+		//渲染第一列表
 		getData( baseUrl+'/api/getmoneyctrl','',function(res){
-			//console.log(res)
+			console.log(res)
 			var html = template('tmp1',res)
 			$('#home-count-box').html(html);
+			//设置分页样式
+			var target = $('.pagination');
+			var page = res.pagesize;
+			var pages = res.totalCount;
 			
+			setpage(target,page,pages);
 		});
 		
-		//渲染商品详情页
-		getData( baseUrl+'/api/getmoneyctrlproduct',{"productid" : 20},function(res){
-			//console.log(res)
-		});
+		//点击上一页下一页切换
+		var num = 0;
+		$('.pagination').on('click','a',function(ev){
+		num++;
+		//设置当前页
+		$('.pagination').attr('current-page-id',num)
 		
-		//渲染比价分类
-		
-		getData( baseUrl+'/api/getcategorytitle','',function(res){
+		var data = {
+			pageid : num
+		}
+		getData( baseUrl+'/api/getmoneyctrl',data,function(res){
 			console.log(res)
-		});
+			var html = template('tmp1',res)
+			$('#home-count-box').html(html);
+			//设置分页样式
+			var target = $('.pagination');
+			var page = res.pagesize;
+			var pages = res.totalCount;
+			setpage(target,page,pages);
+			//点击切换
+		});	 
+	})
+		
+		
 		
 	})
 	

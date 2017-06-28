@@ -4,10 +4,30 @@
     height: 37/20rem;
     line-height: 37/20rem;
     text-align: center;
+    position: relative;
     .box{
         display: flex;
+        position: absolute;
+        width: 100%;
+        z-index: 99;
         ul{
-          flex: 1;  
+          flex: 1; 
+          background-color: #fff; 
+          li{
+              border-bottom: 1px dotted #CCCCCC;
+              text-align: left;
+              padding-left: 1rem;
+//          
+          }
+        }
+    }
+    .nav-box{
+        ul{
+            display: flex;
+            li{
+               flex: 1; 
+               font-size: 14/20rem;  
+            }
         }
     }
 }
@@ -16,6 +36,7 @@
     .wrap{
         .lists{
             ul{
+              
                 li{
                     a{
                         p:nth-of-type(2){
