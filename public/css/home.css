@@ -127,3 +127,6 @@
   font-size: 0.7rem;
   height: 2rem;
 }
+.page .pagination .hide {
+  display: none;
+}

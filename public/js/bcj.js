@@ -32,11 +32,11 @@
 			 		console.log(res)
 			 		var html = template('tmp1',res)
 					$('#bcj-box2').html(html)
-					//console.log(data.category)
+					console.log(data.category)
 					//在这里获取数据，数据渲染完成才能获取宽高
 					w = $('#bcj-box1').children().eq(0).width();
-					maxmove =  $('#bcj-box1').children().length*w - $('#bcj-box1').parent().width()
-					swipermin = -maxmove;
+					minmove =  -$('#bcj-box1').children().length*w + $('#bcj-box1').parent().width()
+					swipermin = minmove;
 			})
 			//绑定事件
 			getbaicaijiaproduct()
@@ -63,65 +63,79 @@
 	
 	//白菜价首页滑动导航
 	$(function(){
-		var startx,movex,distance;
 		
-		$('#bcj-box1').on('touchstart',function(ev){
-			startx = ev.targetTouches[0].clientX;
-			//console.log(ev.targetTouches[0].clientX)
-		});
-		$('#bcj-box1').on('touchmove',function(ev){
-			movex = ev.targetTouches[0].clientX
-			distance =  movex - startx;
-			x = currentx + distance;
-			
-			if( x > swipermax){
-				x = swipermax
-			}
-			if( x > swipermin){
-				x = swipermin
-			}
-			
-			$('#bcj-box1').css({
-				transform : 'translateX('+ x +'px)'
+		var tap = function(obj,callback){
+			var isflag = false;
+			var starttime =0;
+			obj.on('touchstart',function(ev){
+				starttime = Date.now()
+			});
+			obj.on('touchmove',function(ev){
+				isflag = true;
+			});
+			obj.on('touchend',function(ev){
+				if(!isflag && (Date.now()-starttime)<150){
+					callback&&callback(ev)
+				}
 			})
-			console.log(distance)
-		});
-		$('#bcj-box1').on('touchend',function(ev){
-			
-			currentx = currentx+ distance;
-			
-			if(currentx>maxmove){
-				currentx =maxmove;
-			}
-			if(currentx <minmove){
-				currentx =minmove;
-			}
-			//数据清空
-			startx =0;
-			movex = 0;
-			distance =0;
-		});
-	})
-	
-	//首页点击事件
-	$(function(){
-		$('#bcj-box1').on('click' , 'a' ,function(){
-			
-			$(this).addClass('icur').siblings().removeClass('icur');
-			console.log(maxmove)
-			
-			index = $(this).index();
-			var  x =  - index*w
-			
-			if( Math.abs(x)> maxmove ){
-				x = -maxmove;
-			}
-			currentx = x;
+		}
+		//移动端点击事件
+		tap( $('#bcj-box1') ,function(ev){
+			console.log(ev)
+			var id = $(ev.target).data('title-id');
+			index = id;
+			var x = -index*w
+			console.log(id)
+			 x = x > maxmove ?  maxmove : x ;
+		 	 x = x < minmove ? minmove : x ;
 			$('#bcj-box1').css({
-				transform :'translateX('+ x +'px)',
-				transition : "all 1s"
+				transform :' translateX('+ x +'px)',
+				transition :'all 1s'
+			})
+			//记录当前坐标
+			currentx = x
+			
+			$('#bcj-box1').find('a').eq(index).addClass('icur').siblings().removeClass('icur');
+		})
+		//移动端touch事件
+		var startx = 0;
+		var movex = 0;
+		var distance =0;
+		$('#bcj-box1').on('touchstart',function(ev){
+			startx = ev.touches[0].clientX;
+		})
+		$('#bcj-box1').on('touchmove',function(ev){
+			movex = ev.touches[0].clientX;
+			distance = movex - startx;
+			//这里简直坑爹
+			x = distance + currentx;
+			//console.log(x)
+			$('#bcj-box1').css({
+				'transform':'translateX('+ x +'px)'
 			})
 		})
+		$('#bcj-box1').on('touchend',function(ev){
+			currentx = currentx +distance
+			console.log(currentx)
+			if(currentx > swipermax){
+				currentx = swipermax
+			}
+			if(currentx < swipermin){
+				currentx = swipermin
+			}
+			
+			x = currentx;
+			
+			$('#bcj-box1').css({
+				'transform':'translateX('+ x +'px)'
+			})
+			
+		})
+		$('#bcj-box1').on('transitionend',function(){
+			$('#bcj-box1').css({
+				transition : 'none'
+			})
+		})
+		
 	})
-	
 })(window)

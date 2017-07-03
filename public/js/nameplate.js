@@ -38,7 +38,7 @@
 					var arr = res.result;
 					var html =""
 					//拼接字符串
-					var url = "nameplate-con.html?" + tools.query(data)
+					var url = "nameplate-list.html?" + tools.query(data)
 					$.each(arr, function(index,value) {
 						
 						html += '<li><a href='+url+'>'+this.brandName+'</a></li>'

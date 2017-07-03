@@ -10,7 +10,9 @@
 			var html ='<li><a href="#" aria-label="Previous" class="prev"><span aria-hidden="true">&laquo;</span></a></li>';
 			for (var i=0 ; i<num ; i++) {
 				if(i<5){
-					html +=' <li><a href="#">'+ (i + 1 )+'</a></li>'
+					html +=' <li data-index='+(i+1)+'><a href="index.html" data-index='+(i+1)+' >'+ (i + 1 )+'</a></li>'
+				}else{
+					html +=' <li data-index='+(i+1)+' class="hide"><a href="index.html" data-index='+(i+1)+' >'+ (i + 1 )+'</a></li>'
 				}
 			}
 			 html +='<li><a href="#" aria-label="Next" class="next"><span aria-hidden="true">&raquo;</span></a></li>'
